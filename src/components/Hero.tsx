@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 
@@ -180,7 +179,7 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* 3D Meme Showcase */}
+          {/* Featured Meme Image */}
           <div className="relative perspective-800 hidden lg:block">
             <div className="relative w-full h-96 transform-style-3d">
               <div 
@@ -191,14 +190,15 @@ const Hero = () => {
                 }}
               >
                 <div className="bg-black/40 p-4 rounded-lg h-full flex flex-col">
-                  <div className="text-xl font-bold text-cyber-accent mb-2 text-glow-accent">Top Text</div>
-                  <div className="flex-1 flex items-center justify-center bg-black/40 rounded relative">
-                    <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-md">
-                      <div className="w-full h-full bg-gradient-to-br from-cyber-primary/30 to-cyber-accent/30 blur-md"></div>
-                    </div>
-                    <span className="relative z-10 text-5xl font-black text-white text-shadow-lg text-center">MEME CONTENT</span>
+                  <div className="text-xl font-bold text-cyber-accent mb-2 text-glow-accent">Meme Preview</div>
+                  <div className="flex-1 flex items-center justify-center rounded relative overflow-hidden">
+                    <img 
+                      src="https://ideogram.ai/assets/image/lossless/response/h2Lp-rLMScaWK6A-mrFZQA" 
+                      alt="AI-generated meme sample" 
+                      className="w-full h-full object-contain z-10"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyber-primary/20 to-cyber-accent/20"></div>
                   </div>
-                  <div className="text-xl font-bold text-cyber-accent mt-2 text-glow-accent">Bottom Text</div>
                 </div>
               </div>
               
