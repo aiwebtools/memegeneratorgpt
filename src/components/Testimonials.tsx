@@ -1,29 +1,30 @@
 
 import { useState, useEffect } from 'react';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const testimonials = [
   {
     name: "Alex Johnson",
     role: "Social Media Manager",
-    image: "/placeholder.svg",
+    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
     quote: "Meme Generator GPT has transformed our social media strategy. The hyperrealistic visual options and professional planning make our memes stand out from competitors."
   },
   {
     name: "Samantha Lee",
     role: "Content Creator",
-    image: "/placeholder.svg",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
     quote: "I love how Meme Generator GPT walks me through the entire process. The creative suggestions when I'm out of ideas have saved me countless times!"
   },
   {
     name: "Marcus Wilson",
     role: "Marketing Director",
-    image: "/placeholder.svg",
+    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
     quote: "Our engagement numbers skyrocketed since we started using Meme Generator GPT. The ability to compile memes into themed collections is game-changing for campaigns."
   },
   {
     name: "Jamie Rivera",
     role: "Influencer",
-    image: "/placeholder.svg",
+    image: "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1",
     quote: "As someone who needs to stay on trend, Meme Generator GPT helps me create relevant, high-quality memes in minutes instead of hours. Absolutely essential tool!"
   }
 ];
@@ -66,13 +67,15 @@ const Testimonials = () => {
               }`}
             >
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-full overflow-hidden mr-4 bg-cyber-primary/20">
-                  <img 
+                <Avatar className="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-cyber-primary/30">
+                  <AvatarImage 
                     src={testimonial.image} 
-                    alt={testimonial.name} 
-                    className="w-full h-full object-cover"
+                    alt={testimonial.name}
                   />
-                </div>
+                  <AvatarFallback className="bg-cyber-primary/20">
+                    {testimonial.name.split(' ').map(name => name[0]).join('')}
+                  </AvatarFallback>
+                </Avatar>
                 <div>
                   <h4 className="font-bold text-cyber-primary">{testimonial.name}</h4>
                   <p className="text-sm text-cyber-foreground/70">{testimonial.role}</p>
