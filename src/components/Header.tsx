@@ -2,9 +2,11 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { MessageSquare, HelpCircle, Info, Wrench } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
   
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-cyber-background/80 backdrop-blur-lg border-b border-cyber-primary/30">
@@ -25,59 +27,63 @@ const Header = () => {
           </div>
         </a>
 
-        {/* Mobile Menu Toggle */}
-        <div className="lg:hidden">
-          <Button 
-            variant="ghost" 
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-cyber-foreground hover:text-cyber-primary"
-          >
-            {isMenuOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-            )}
-          </Button>
-        </div>
+        {/* Mobile Menu Toggle - Only show on mobile */}
+        {isMobile && (
+          <div className="lg:hidden">
+            <Button 
+              variant="ghost" 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-cyber-foreground hover:text-cyber-primary"
+            >
+              {isMenuOpen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+              )}
+            </Button>
+          </div>
+        )}
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-4">
-          <a 
-            href="https://chatgpt.com/g/g-68118a4de96c8191aab638a290e01812-meme-generator-gpt" 
-            className="flex items-center px-4 py-2 rounded-full border border-cyber-primary/50 hover:border-cyber-primary hover:bg-cyber-primary/10 transition-all"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MessageSquare size={18} className="mr-2" />
-            Meme Generator GPT
-          </a>
-          <a 
-            href="#faq" 
-            className="flex items-center px-4 py-2 rounded-full border border-cyber-primary/50 hover:border-cyber-primary hover:bg-cyber-primary/10 transition-all"
-          >
-            <HelpCircle size={18} className="mr-2" />
-            FAQ
-          </a>
-          <a 
-            href="#disclaimer" 
-            className="flex items-center px-4 py-2 rounded-full border border-cyber-primary/50 hover:border-cyber-primary hover:bg-cyber-primary/10 transition-all"
-          >
-            <Info size={18} className="mr-2" />
-            Disclaimer
-          </a>
-          <a 
-            href="https://www.aiwebtools.ai" 
-            className="flex items-center px-4 py-2 rounded-full border border-cyber-primary/50 hover:border-cyber-primary hover:bg-cyber-primary/10 transition-all"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Wrench size={18} className="mr-2" />
-            More AI Tools
-          </a>
-        </nav>
+        {/* Desktop Navigation - Always visible on desktop */}
+        {!isMobile && (
+          <nav className="flex items-center space-x-4">
+            <a 
+              href="https://chatgpt.com/g/g-68118a4de96c8191aab638a290e01812-meme-generator-gpt" 
+              className="flex items-center px-4 py-2 rounded-full border border-cyber-primary/50 hover:border-cyber-primary hover:bg-cyber-primary/10 transition-all"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MessageSquare size={18} className="mr-2" />
+              Meme Generator GPT
+            </a>
+            <a 
+              href="#faq" 
+              className="flex items-center px-4 py-2 rounded-full border border-cyber-primary/50 hover:border-cyber-primary hover:bg-cyber-primary/10 transition-all"
+            >
+              <HelpCircle size={18} className="mr-2" />
+              FAQ
+            </a>
+            <a 
+              href="#disclaimer" 
+              className="flex items-center px-4 py-2 rounded-full border border-cyber-primary/50 hover:border-cyber-primary hover:bg-cyber-primary/10 transition-all"
+            >
+              <Info size={18} className="mr-2" />
+              Disclaimer
+            </a>
+            <a 
+              href="https://www.aiwebtools.ai" 
+              className="flex items-center px-4 py-2 rounded-full border border-cyber-primary/50 hover:border-cyber-primary hover:bg-cyber-primary/10 transition-all"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Wrench size={18} className="mr-2" />
+              More AI Tools
+            </a>
+          </nav>
+        )}
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
+        {/* Mobile Navigation - Only show when menu is open and on mobile */}
+        {isMobile && isMenuOpen && (
           <div className="lg:hidden w-full pt-4 pb-2 glass-panel mt-2 rounded-lg">
             <nav className="flex flex-col space-y-2">
               <a 
@@ -125,3 +131,4 @@ const Header = () => {
 };
 
 export default Header;
+
