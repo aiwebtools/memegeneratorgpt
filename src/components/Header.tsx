@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { MessageSquare, HelpCircle, Info, Wrench } from 'lucide-react';
+import { MessageSquare, HelpCircle, Info, Wrench, Palette } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Header = () => {
@@ -18,8 +18,14 @@ const Header = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="w-10 h-10 rounded-full bg-cyber-primary grid place-items-center neon-border animate-pulse-glow">
-            <span className="text-xl font-bold">MG</span>
+          <div className="w-10 h-10 rounded-full bg-cyber-primary grid place-items-center neon-border animate-pulse-glow relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-br from-cyber-primary via-cyber-accent to-cyber-secondary opacity-80 group-hover:opacity-100 transition-opacity"></div>
+            <Palette 
+              size={18} 
+              className="text-white z-10 transform group-hover:scale-110 transition-transform" 
+              strokeWidth={2.5}
+            />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.8)_0%,_transparent_70%)] opacity-30 group-hover:opacity-60 transition-opacity"></div>
           </div>
           <div>
             <h1 className="text-xl font-bold text-cyber-primary text-glow">Meme Generator GPT</h1>
@@ -131,4 +137,3 @@ const Header = () => {
 };
 
 export default Header;
-
