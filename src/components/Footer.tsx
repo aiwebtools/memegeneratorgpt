@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { MessageSquare, HelpCircle, Info, Tool, ArrowRight } from 'lucide-react';
+import { MessageSquare, HelpCircle, Info, Wrench, ArrowRight } from 'lucide-react';
 
 const Footer = () => {
   return (

@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { MessageSquare, HelpCircle, Info, Tool } from 'lucide-react';
+import { MessageSquare, HelpCircle, Info, Wrench } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,7 +71,7 @@ const Header = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Tool size={18} className="mr-2" />
+            <Wrench size={18} className="mr-2" />
             More AI Tools
           </a>
         </nav>
@@ -113,7 +113,7 @@ const Header = () => {
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <Tool size={18} className="mr-2" />
+                <Wrench size={18} className="mr-2" />
                 More AI Tools
               </a>
             </nav>
