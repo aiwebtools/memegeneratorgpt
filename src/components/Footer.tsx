@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { MessageSquare, HelpCircle, Info, Wrench, ArrowRight } from 'lucide-react';
 
@@ -144,7 +143,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Access Tool <Wrench size={16} className="ml-2" />
+                ACCESS MEME GENERATOR GPT NOW <Wrench size={16} className="ml-2" />
               </a>
             </Button>
             
