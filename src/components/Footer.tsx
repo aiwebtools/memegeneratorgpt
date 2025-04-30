@@ -134,9 +134,23 @@ const Footer = () => {
               </li>
             </ul>
             
+            <Button
+              variant="outline"
+              className="mt-6 bg-cyber-primary/10 border-cyber-primary hover:bg-cyber-primary hover:text-cyber-background transition-all duration-300"
+              asChild
+            >
+              <a 
+                href="https://chatgpt.com/g/g-68118a4de96c8191aab638a290e01812-meme-generator-gpt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Access Tool <Wrench size={16} className="ml-2" />
+              </a>
+            </Button>
+            
             <a 
               href="https://www.aiwebtools.ai"
-              className="mt-6 inline-flex items-center px-5 py-3 rounded-full bg-cyber-primary/10 border border-cyber-primary hover:bg-cyber-primary hover:text-cyber-background transition-all duration-300"
+              className="mt-4 inline-flex items-center px-5 py-3 rounded-full bg-cyber-primary/10 border border-cyber-primary hover:bg-cyber-primary hover:text-cyber-background transition-all duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
