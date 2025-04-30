@@ -22,7 +22,6 @@ const MemeShowcase = ({ mousePos }: MemeShowcaseProps) => {
           }}
         >
           <div className="bg-black/40 p-4 rounded-lg h-full flex flex-col">
-            <div className="text-xl font-bold text-cyber-accent mb-2 text-glow-accent">Meme Preview</div>
             <div className="flex-1 flex items-center justify-center rounded relative overflow-hidden">
               <img 
                 src="https://ideogram.ai/assets/image/lossless/response/h2Lp-rLMScaWK6A-mrFZQA" 
