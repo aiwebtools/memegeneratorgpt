@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { MessageSquare, HelpCircle, Info, Wrench, ArrowRight } from 'lucide-react';
 
@@ -101,7 +102,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://aiwebtools.ai/terms-of-services" 
+                  href="https://aiwebtools.lovable.app/disclaimers" 
                   className="text-cyber-foreground/70 hover:text-cyber-primary transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -180,7 +181,7 @@ const Footer = () => {
               Privacy
             </a>
             <a 
-              href="https://aiwebtools.ai/terms-of-services"
+              href="https://aiwebtools.lovable.app/disclaimers"
               className="text-cyber-foreground/70 hover:text-cyber-primary transition-colors text-sm"
               target="_blank"
               rel="noopener noreferrer"

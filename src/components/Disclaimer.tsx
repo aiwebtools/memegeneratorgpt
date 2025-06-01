@@ -66,7 +66,7 @@ const Disclaimer = () => {
               </a>
               {" "}and{" "}
               <a 
-                href="https://aiwebtools.ai/terms-of-services" 
+                href="https://aiwebtools.lovable.app/disclaimers" 
                 className="text-cyber-primary hover:text-cyber-accent transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
