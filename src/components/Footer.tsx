@@ -1,49 +1,55 @@
-
 import { Button } from "@/components/ui/button";
 import { MessageSquare, HelpCircle, Info, Wrench, ArrowRight } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-cyber-background border-t border-cyber-primary/30 pt-10 pb-6">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-          <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-cyber-primary grid place-items-center">
-                <span className="text-sm font-bold">MG</span>
+    <footer className="bg-gradient-to-br from-cyber-background via-cyber-background/95 to-cyber-primary/10 border-t-2 border-cyber-primary/50 pt-12 pb-8 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,_rgba(155,135,245,0.15)_0%,_transparent_50%)] animate-pulse"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,_rgba(217,70,239,0.1)_0%,_transparent_50%)] animate-pulse delay-500"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          <div className="space-y-6">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyber-primary via-cyber-accent to-cyber-secondary grid place-items-center neon-border animate-glow relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyber-primary/80 via-cyber-accent/60 to-cyber-secondary/80 animate-pulse"></div>
+                <span className="text-lg font-bold z-10 text-white text-shadow-lg">MG</span>
               </div>
-              <h2 className="text-lg font-bold text-cyber-primary">Meme Generator GPT</h2>
+              <div>
+                <h2 className="text-xl font-bold text-cyber-primary text-glow">Meme Generator GPT</h2>
+                <p className="text-xs text-cyber-foreground/70">Presented by <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-accent transition-colors hover:text-glow">AiWebTools.Ai</a></p>
+              </div>
             </div>
-            <p className="text-cyber-foreground/70 mb-4">
+            <p className="text-cyber-foreground/80 mb-6 leading-relaxed">
               Create professional, high-quality memes one at a time with our AI-powered meme generator.
             </p>
-            <div className="flex space-x-2">
+            <div className="flex space-x-4">
               <a 
                 href="https://chatgpt.com/g/g-68118a4de96c8191aab638a290e01812-meme-generator-gpt"
-                className="text-cyber-primary hover:text-cyber-accent transition-colors"
+                className="text-cyber-primary hover:text-cyber-accent transition-all duration-300 hover:scale-110 hover:text-glow"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MessageSquare size={20} />
+                <MessageSquare size={24} />
               </a>
               <a 
                 href="#faq"
-                className="text-cyber-primary hover:text-cyber-accent transition-colors"
+                className="text-cyber-primary hover:text-cyber-accent transition-all duration-300 hover:scale-110 hover:text-glow"
               >
-                <HelpCircle size={20} />
+                <HelpCircle size={24} />
               </a>
               <a 
                 href="#disclaimer"
-                className="text-cyber-primary hover:text-cyber-accent transition-colors"
+                className="text-cyber-primary hover:text-cyber-accent transition-all duration-300 hover:scale-110 hover:text-glow"
               >
-                <Info size={20} />
+                <Info size={24} />
               </a>
             </div>
           </div>
           
           <div>
-            <h3 className="text-cyber-primary font-semibold mb-4">Navigation</h3>
-            <ul className="space-y-2">
+            <h3 className="text-cyber-primary font-bold mb-6 text-lg text-glow">Navigation</h3>
+            <ul className="space-y-3">
               <li>
                 <a 
                   href="#how-it-works"
@@ -80,12 +86,12 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-cyber-primary font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2">
+            <h3 className="text-cyber-primary font-bold mb-6 text-lg text-glow">Legal</h3>
+            <ul className="space-y-3">
               <li>
                 <a 
                   href="#disclaimer"
-                  className="text-cyber-foreground/70 hover:text-cyber-primary transition-colors"
+                  className="text-cyber-foreground/80 hover:text-cyber-primary transition-all duration-300 hover:text-glow"
                 >
                   Disclaimer
                 </a>
@@ -93,7 +99,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="https://openai.com/policies/privacy-policy/" 
-                  className="text-cyber-foreground/70 hover:text-cyber-primary transition-colors"
+                  className="text-cyber-foreground/80 hover:text-cyber-primary transition-all duration-300 hover:text-glow"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -103,7 +109,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="https://aiwebtools.lovable.app/disclaimers" 
-                  className="text-cyber-foreground/70 hover:text-cyber-primary transition-colors"
+                  className="text-cyber-foreground/80 hover:text-cyber-primary transition-all duration-300 hover:text-glow"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -114,29 +120,29 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-cyber-primary font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-2">
+            <h3 className="text-cyber-primary font-bold mb-6 text-lg text-glow">Contact Us</h3>
+            <ul className="space-y-3">
               <li>
                 <a 
                   href="tel:4758008096" 
-                  className="text-cyber-foreground/70 hover:text-cyber-primary transition-colors flex items-center"
+                  className="text-cyber-foreground/80 hover:text-cyber-primary transition-all duration-300 flex items-center hover:text-glow"
                 >
-                  <span className="mr-2">📱</span> (475) 800-8096
+                  <span className="mr-2 text-lg">📱</span> (475) 800-8096
                 </a>
               </li>
               <li>
                 <a 
                   href="mailto:Contact@ai-webtools.com" 
-                  className="text-cyber-foreground/70 hover:text-cyber-primary transition-colors flex items-center"
+                  className="text-cyber-foreground/80 hover:text-cyber-primary transition-all duration-300 flex items-center hover:text-glow"
                 >
-                  <span className="mr-2">📧</span> Contact@ai-webtools.com
+                  <span className="mr-2 text-lg">📧</span> Contact@ai-webtools.com
                 </a>
               </li>
             </ul>
             
             <Button
               variant="outline"
-              className="mt-6 bg-cyber-primary/10 border-cyber-primary hover:bg-cyber-primary hover:text-cyber-background transition-all duration-300"
+              className="mt-8 bg-gradient-to-r from-cyber-primary/20 to-cyber-accent/20 border-2 border-cyber-primary hover:bg-gradient-to-r hover:from-cyber-primary hover:to-cyber-accent hover:text-cyber-background transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyber-primary/50"
               asChild
             >
               <a 
@@ -144,37 +150,38 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                ACCESS MEME GENERATOR GPT NOW <Wrench size={16} className="ml-2" />
+                ACCESS MEME GENERATOR GPT NOW <Wrench size={18} className="ml-2" />
               </a>
             </Button>
             
             <a 
               href="https://www.aiwebtools.ai"
-              className="mt-4 inline-flex items-center px-5 py-3 rounded-full bg-cyber-primary/10 border border-cyber-primary hover:bg-cyber-primary hover:text-cyber-background transition-all duration-300"
+              className="mt-6 inline-flex items-center px-6 py-4 rounded-full bg-gradient-to-r from-cyber-primary/20 to-cyber-secondary/20 border-2 border-cyber-primary hover:bg-gradient-to-r hover:from-cyber-primary hover:to-cyber-secondary hover:text-cyber-background transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyber-accent/50"
               target="_blank"
               rel="noopener noreferrer"
             >
               More AI Tools
-              <ArrowRight size={16} className="ml-2" />
+              <ArrowRight size={18} className="ml-2" />
             </a>
           </div>
         </div>
         
-        <div className="border-t border-cyber-primary/30 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t-2 border-gradient-to-r from-cyber-primary via-cyber-accent to-cyber-secondary pt-8 flex flex-col md:flex-row justify-between items-center relative">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyber-primary to-transparent animate-pulse"></div>
           <div>
             <a 
               href="https://www.aiwebtools.ai"
-              className="text-cyber-foreground/70 hover:text-cyber-primary transition-colors"
+              className="text-cyber-foreground/80 hover:text-cyber-primary transition-all duration-300 hover:text-glow"
               target="_blank"
               rel="noopener noreferrer"
             >
               © 2025 AI WEB TOOLS LLC. All rights reserved.
             </a>
           </div>
-          <div className="flex space-x-4 mt-4 md:mt-0">
+          <div className="flex space-x-6 mt-4 md:mt-0">
             <a 
               href="https://openai.com/policies/privacy-policy/"
-              className="text-cyber-foreground/70 hover:text-cyber-primary transition-colors text-sm"
+              className="text-cyber-foreground/80 hover:text-cyber-primary transition-all duration-300 text-sm hover:text-glow"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -182,7 +189,7 @@ const Footer = () => {
             </a>
             <a 
               href="https://aiwebtools.lovable.app/disclaimers"
-              className="text-cyber-foreground/70 hover:text-cyber-primary transition-colors text-sm"
+              className="text-cyber-foreground/80 hover:text-cyber-primary transition-all duration-300 text-sm hover:text-glow"
               target="_blank"
               rel="noopener noreferrer"
             >

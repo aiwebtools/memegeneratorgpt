@@ -41,11 +41,12 @@
 
 @layer base {
   * {
-    @apply border-border selection:bg-cyber-primary/10 selection:text-cyber-primary;
+    @apply border-border selection:bg-cyber-primary/20 selection:text-cyber-primary;
   }
   
   body {
-    @apply bg-cyber-background text-cyber-foreground font-cyber antialiased;
+    @apply bg-gradient-to-br from-cyber-background via-cyber-background to-cyber-primary/5 text-cyber-foreground font-cyber antialiased;
+    background-attachment: fixed;
   }
   
   html {
@@ -55,34 +56,85 @@
 
 @layer utilities {
   .text-glow {
-    text-shadow: 0 0 10px rgba(155, 135, 245, 0.7),
-                0 0 20px rgba(155, 135, 245, 0.5);
+    text-shadow: 0 0 10px rgba(155, 135, 245, 0.8),
+                0 0 20px rgba(155, 135, 245, 0.6),
+                0 0 30px rgba(155, 135, 245, 0.4);
   }
 
   .text-glow-accent {
-    text-shadow: 0 0 10px rgba(217, 70, 239, 0.7),
-                0 0 20px rgba(217, 70, 239, 0.5);
+    text-shadow: 0 0 10px rgba(217, 70, 239, 0.8),
+                0 0 20px rgba(217, 70, 239, 0.6),
+                0 0 30px rgba(217, 70, 239, 0.4);
   }
 
   .neon-border {
-    box-shadow: 0 0 5px rgba(155, 135, 245, 0.7),
-                inset 0 0 5px rgba(155, 135, 245, 0.7);
+    box-shadow: 0 0 10px rgba(155, 135, 245, 0.8),
+                inset 0 0 10px rgba(155, 135, 245, 0.8),
+                0 0 20px rgba(155, 135, 245, 0.6),
+                inset 0 0 20px rgba(155, 135, 245, 0.6);
   }
 
   .cyber-gradient {
-    background: linear-gradient(135deg, #1A1F2C 0%, #222222 100%);
+    background: linear-gradient(135deg, #1A1F2C 0%, #2D1B69 50%, #222222 100%);
   }
 
   .glass-panel {
-    background: rgba(26, 31, 44, 0.7);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(155, 135, 245, 0.3);
+    background: rgba(26, 31, 44, 0.8);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(155, 135, 245, 0.4);
+    box-shadow: 0 8px 32px rgba(155, 135, 245, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
   .cyber-grid {
     background-image: 
-      linear-gradient(rgba(155, 135, 245, 0.2) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(155, 135, 245, 0.2) 1px, transparent 1px);
-    background-size: 20px 20px;
+      linear-gradient(rgba(155, 135, 245, 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(155, 135, 245, 0.3) 1px, transparent 1px);
+    background-size: 30px 30px;
+    animation: grid-move 20s linear infinite;
+  }
+
+  @keyframes grid-move {
+    0% { background-position: 0 0; }
+    100% { background-position: 30px 30px; }
+  }
+
+  @keyframes divine-shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  @keyframes holy-pulse {
+    0%, 100% { 
+      box-shadow: 0 0 20px rgba(155, 135, 245, 0.8),
+                  0 0 40px rgba(217, 70, 239, 0.6),
+                  0 0 60px rgba(155, 135, 245, 0.4);
+    }
+    50% { 
+      box-shadow: 0 0 30px rgba(155, 135, 245, 1),
+                  0 0 60px rgba(217, 70, 239, 0.8),
+                  0 0 90px rgba(155, 135, 245, 0.6);
+    }
+  }
+
+  @keyframes ethereal-float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(1deg); }
+    50% { transform: translateY(-5px) rotate(0deg); }
+    75% { transform: translateY(-15px) rotate(-1deg); }
+  }
+
+  .divine-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% 100%;
+    animation: divine-shimmer 3s ease-in-out infinite;
+  }
+
+  .holy-pulse {
+    animation: holy-pulse 4s ease-in-out infinite;
+  }
+
+  .ethereal-float {
+    animation: ethereal-float 8s ease-in-out infinite;
   }
 }

@@ -98,41 +98,96 @@ export default {
 				},
 				'glow': {
 					'0%, 100%': { 
-						boxShadow: '0 0 15px 5px rgba(155, 135, 245, 0.7)' 
+						boxShadow: '0 0 20px 8px rgba(155, 135, 245, 0.8), 0 0 40px 12px rgba(217, 70, 239, 0.6)' 
 					},
 					'50%': { 
-						boxShadow: '0 0 30px 10px rgba(155, 135, 245, 0.9)' 
+						boxShadow: '0 0 30px 12px rgba(155, 135, 245, 1), 0 0 60px 18px rgba(217, 70, 239, 0.8)' 
 					},
 				},
 				'float': {
 					'0%, 100%': {
-						transform: 'translateY(0)'
+						transform: 'translateY(0) rotate(0deg)'
+					},
+					'25%': {
+						transform: 'translateY(-15px) rotate(2deg)'
 					},
 					'50%': {
-						transform: 'translateY(-10px)'
+						transform: 'translateY(-8px) rotate(0deg)'
+					},
+					'75%': {
+						transform: 'translateY(-20px) rotate(-2deg)'
 					}
 				},
 				'pulse-glow': {
 					'0%, 100%': {
 						opacity: '1',
-						filter: 'brightness(1)'
+						filter: 'brightness(1) saturate(1.2)',
+						transform: 'scale(1)'
 					},
 					'50%': {
-						opacity: '0.8',
-						filter: 'brightness(1.2)'
+						opacity: '0.9',
+						filter: 'brightness(1.3) saturate(1.5)',
+						transform: 'scale(1.02)'
+					}
+				},
+				'divine-wave': {
+					'0%': {
+						backgroundPosition: '0% 50%'
+					},
+					'50%': {
+						backgroundPosition: '100% 50%'
+					},
+					'100%': {
+						backgroundPosition: '0% 50%'
+					}
+				},
+				'cosmic-drift': {
+					'0%': {
+						transform: 'translateX(0) translateY(0) rotate(0deg)'
+					},
+					'25%': {
+						transform: 'translateX(10px) translateY(-5px) rotate(1deg)'
+					},
+					'50%': {
+						transform: 'translateX(-5px) translateY(-10px) rotate(0deg)'
+					},
+					'75%': {
+						transform: 'translateX(-10px) translateY(-5px) rotate(-1deg)'
+					},
+					'100%': {
+						transform: 'translateX(0) translateY(0) rotate(0deg)'
+					}
+				},
+				'ethereal-glow': {
+					'0%, 100%': {
+						textShadow: '0 0 10px rgba(155, 135, 245, 0.8), 0 0 20px rgba(155, 135, 245, 0.6), 0 0 30px rgba(155, 135, 245, 0.4)'
+					},
+					'33%': {
+						textShadow: '0 0 15px rgba(217, 70, 239, 0.8), 0 0 25px rgba(217, 70, 239, 0.6), 0 0 35px rgba(217, 70, 239, 0.4)'
+					},
+					'66%': {
+						textShadow: '0 0 12px rgba(249, 115, 22, 0.8), 0 0 22px rgba(249, 115, 22, 0.6), 0 0 32px rgba(249, 115, 22, 0.4)'
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'glow': 'glow 2s ease-in-out infinite',
-				'float': 'float 6s ease-in-out infinite',
-				'pulse-glow': 'pulse-glow 3s ease-in-out infinite'
+				'glow': 'glow 3s ease-in-out infinite',
+				'float': 'float 8s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+				'divine-wave': 'divine-wave 6s ease-in-out infinite',
+				'cosmic-drift': 'cosmic-drift 12s ease-in-out infinite',
+				'ethereal-glow': 'ethereal-glow 5s ease-in-out infinite'
 			},
 			fontFamily: {
 				cyber: ['Orbitron', 'sans-serif'],
 				mono: ['Space Mono', 'monospace']
+			},
+			backgroundImage: {
+				'divine-gradient': 'linear-gradient(45deg, #9b87f5, #D946EF, #F97316, #9b87f5)',
+				'cosmic-gradient': 'radial-gradient(circle at center, rgba(155,135,245,0.3) 0%, rgba(217,70,239,0.2) 50%, transparent 100%)',
+				'ethereal-gradient': 'conic-gradient(from 0deg, #9b87f5, #D946EF, #F97316, #9b87f5)'
 			}
 		}
 	},
