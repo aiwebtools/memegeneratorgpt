@@ -1,0 +1,54 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <url>
+    <loc>https://aiwebtools.ai/</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ideogram.ai/assets/image/lossless/response/h2Lp-rLMScaWK6A-mrFZQA</image:loc>
+      <image:title>AI Web Tools - Free AI Tools and Meme Generator GPT</image:title>
+      <image:caption>Professional AI-powered tools including Meme Generator GPT for content creators and businesses</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://aiwebtools.ai/#how-it-works</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://aiwebtools.ai/#features</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://aiwebtools.ai/#testimonials</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://aiwebtools.ai/#faq</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://aiwebtools.ai/#disclaimer</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>
