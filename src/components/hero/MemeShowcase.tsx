@@ -21,16 +21,18 @@ const MemeShowcase = ({ mousePos }: MemeShowcaseProps) => {
             transition: 'transform 0.1s ease-out'
           }}
         >
-          <div className="bg-black/40 p-4 rounded-lg h-full flex flex-col">
-            <div className="flex-1 flex items-center justify-center rounded relative overflow-hidden">
-              <img 
-                src="https://ideogram.ai/assets/image/lossless/response/h2Lp-rLMScaWK6A-mrFZQA" 
-                alt="AI-generated meme sample" 
-                className="w-full h-full object-contain z-10"
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-cyber-primary/20 to-cyber-accent/20"></div>
+            <div className="bg-black/40 p-2 rounded-lg h-full flex flex-col">
+              <div className="flex-1 flex items-center justify-center rounded relative overflow-hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/Myg8P8wg294?autoplay=1&mute=0&loop=1&playlist=Myg8P8wg294&vq=hd1080&rel=0&modestbranding=1"
+                  title="Meme Generator GPT Demo"
+                  className="w-full h-full z-10 rounded"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ aspectRatio: '16/9', minHeight: '280px' }}
+                />
+              </div>
             </div>
-          </div>
         </div>
         
         {/* Extra meme showcase elements in background */}
