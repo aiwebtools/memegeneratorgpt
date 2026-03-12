@@ -17,7 +17,7 @@ const Footer = () => {
               </div>
               <div>
                 <h2 className="text-xl font-bold text-cyber-primary text-glow">Meme Generator GPT</h2>
-                <p className="text-xs text-cyber-foreground/70">Presented by <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-accent transition-colors hover:text-glow">AiWebTools.Ai</a></p>
+                <p className="text-xs text-cyber-foreground/70">Presented by <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-accent transition-colors hover:text-glow">AiWebTools.Ai</a></p>
               </div>
             </div>
             <p className="text-cyber-foreground/80 mb-6 leading-relaxed">
@@ -155,7 +155,7 @@ const Footer = () => {
             </Button>
             
             <a 
-              href="https://www.aiwebtools.ai"
+              href="https://aiwebtools.lovable.app/?via=aiwebtools"
               className="mt-6 inline-flex items-center px-6 py-4 rounded-full bg-gradient-to-r from-cyber-primary/20 to-cyber-secondary/20 border-2 border-cyber-primary hover:bg-gradient-to-r hover:from-cyber-primary hover:to-cyber-secondary hover:text-cyber-background transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyber-accent/50"
               target="_blank"
               rel="noopener noreferrer"
@@ -170,7 +170,7 @@ const Footer = () => {
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyber-primary to-transparent animate-pulse"></div>
           <div>
             <a 
-              href="https://www.aiwebtools.ai"
+              href="https://aiwebtools.lovable.app/?via=aiwebtools"
               className="text-cyber-foreground/80 hover:text-cyber-primary transition-all duration-300 hover:text-glow"
               target="_blank"
               rel="noopener noreferrer"
