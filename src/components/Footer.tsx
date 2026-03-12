@@ -155,7 +155,7 @@ const Footer = () => {
             </Button>
             
             <a 
-              href="https://www.aiwebtools.ai"
+              href="https://aiwebtools.lovable.app/?via=aiwebtools"
               className="mt-6 inline-flex items-center px-6 py-4 rounded-full bg-gradient-to-r from-cyber-primary/20 to-cyber-secondary/20 border-2 border-cyber-primary hover:bg-gradient-to-r hover:from-cyber-primary hover:to-cyber-secondary hover:text-cyber-background transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyber-accent/50"
               target="_blank"
               rel="noopener noreferrer"
