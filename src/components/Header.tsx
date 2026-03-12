@@ -77,7 +77,7 @@ const Header = () => {
               Disclaimer
             </a>
             <a 
-              href="https://www.aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               className="flex items-center px-4 py-2 rounded-full border border-cyber-primary/50 hover:border-cyber-primary hover:bg-cyber-primary/10 transition-all"
               target="_blank"
               rel="noopener noreferrer"
