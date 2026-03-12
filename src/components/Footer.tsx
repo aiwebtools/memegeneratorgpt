@@ -17,7 +17,7 @@ const Footer = () => {
               </div>
               <div>
                 <h2 className="text-xl font-bold text-cyber-primary text-glow">Meme Generator GPT</h2>
-                <p className="text-xs text-cyber-foreground/70">Presented by <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-accent transition-colors hover:text-glow">AiWebTools.Ai</a></p>
+                <p className="text-xs text-cyber-foreground/70">Presented by <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-accent transition-colors hover:text-glow">AiWebTools.Ai</a></p>
               </div>
             </div>
             <p className="text-cyber-foreground/80 mb-6 leading-relaxed">
