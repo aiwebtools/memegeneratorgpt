@@ -170,7 +170,7 @@ const Footer = () => {
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyber-primary to-transparent animate-pulse"></div>
           <div>
             <a 
-              href="https://www.aiwebtools.ai"
+              href="https://aiwebtools.lovable.app/?via=aiwebtools"
               className="text-cyber-foreground/80 hover:text-cyber-primary transition-all duration-300 hover:text-glow"
               target="_blank"
               rel="noopener noreferrer"
